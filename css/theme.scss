@@ -1,0 +1,149 @@
+
+$font-color: #444444;
+$font-head: 'Abril Fatface', cursive;
+$font-side: 'Open Sans', sans-serif;
+
+*{margin: auto 0px;color: $font-color;}
+
+body{
+  overflow-y: hidden;
+ font-family: $font-side;
+ background-color: #efefef;
+ //background-color: pink;
+ h1{
+   font-size:1em;
+   font-family: $font-head;
+   text-transform: uppercase;
+   letter-spacing: -2px;
+   line-height: 0px;
+   background-color: #efefef;
+   padding:30px 25px 30px 25px;
+   color:#111111;
+
+ }
+}
+// LISTd
+.parallax-container{
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+.banner{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: black;
+}
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2);
+  background-size: 100%;
+  z-index: -1;
+  background-image: url('/background.jpg');
+  //background-image: 'background.jpg';
+}
+.container{
+  box-shadow: 0px 0px 32px -4px rgba(0,0,0,1);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #efefef;
+}
+nav{
+  margin:auto;
+  padding-top:50px;
+  padding-bottom: 35px;
+  width:500px;
+  ul{
+
+    list-style-type: none;
+    padding:0px;
+    display:flex;
+    justify-content: space-between;
+    li{
+
+      //flex-grow: 1;
+      margin-left:10px;
+      margin-right:10px;
+      text-align:center;
+      width:200px;
+      display: inline-block;
+
+      a{
+        font-family: $font-side;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size:1em;
+        letter-spacing:-2px;
+      }
+    }
+  }
+}
+// LINKS
+a{text-decoration: none;}
+a:hover{color:orange;}
+/* Change layout  when screen size < 800px small screen
+                    -display boxes are 100% each
+                  when screen size > 800px small screen
+                    -display boxes are 50% each
+                  when screen size > 1024px medium screen
+                    -display boxes are 33% each
+                  when screen size > 1920
+                    -display boxes are 33% each contained in wrapper
+STARTING BOX WRAPPER*/
+.box_wrapper{
+  //background-color: orange;
+  margin:2px 20px 0px 20px;
+  flex:1;
+  flex-wrap:wrap;
+  display:flex;
+  justify-content: space-between;
+  .box_img{
+    margin:.5vw;
+    margin-bottom:15px;
+    width:48%;
+    height:48%;
+    background-color: green;
+    box-shadow: 0px 0px 32px -4px rgba(0,0,0,1);
+  }
+}
+//SMALLER SCREENS <800
+@media screen and (max-width: 800px) {
+  .banner{
+    height:100vh;
+  }
+  .box_wrapper{
+    margin-left:15px;
+    margin-right:15px;
+    .box_img{
+      flex:1;
+      margin:0px;
+      margin-bottom:25px;
+      width:90%;
+    }
+  }
+}
+//BIGGER SCREENS
+@media screen and (min-width: 1024px) {
+  .container{max-width:1150px; margin:0px auto;}
+  .box_wrapper{
+    margin-left:15px;
+    margin-right:15px;
+    .box_img{
+      flex:1;
+      margin:.5vw;
+      margin-bottom:5px;
+      width:30%;
+    }
+  }
+
+}
