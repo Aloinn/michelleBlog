@@ -40,7 +40,7 @@ body {
   transform: translateZ(-0.9px) scale(2);
   background-size: 100%;
   z-index: -1;
-  background-image: url("{{site.url}}/images/background.jpg"); }
+  background-image: url("https://aloinn.github.io/michelleBlog/images/background.jpg"); }
 
 .container {
   box-shadow: 0px 0px 32px -4px black;
