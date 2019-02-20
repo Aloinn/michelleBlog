@@ -1,3 +1,5 @@
+$assetPath : "https://aloinn.github.io/michelleBlog";
+
 $font-color: #444444;
 $font-head: 'Abril Fatface', cursive;
 $font-side: 'Open Sans', sans-serif;
@@ -48,7 +50,7 @@ body{
   transform: translateZ(-0.9px) scale(2);
   background-size: 100%;
   z-index: -1;
-  background-image: url('{{site.url}}/images/background.jpg');
+  background-image: url('#{$assetPath}/images/background.jpg');
   //background-image: 'background.jpg';
 }
 .container{
