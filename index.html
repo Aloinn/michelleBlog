@@ -1,6 +1,17 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
+images:
+  - image_path: /images/img_1.png
+    title: Best part
+  - image_path: /images/img_2.png
+    title: Girl collage
+  - image_path: /images/img_3.jpg
+    title: Young dumb broke highschool kids
+  - image_path: /images/img_4.png
+    title: Drawings
+  - image_path: /images/img_5.png
+    title: Slow dance in the dark
 ---
+{% for image in page.images %}
+  <img class="box_img" src="{{ image.image_path }}" alt="{{ image.title}}"/>
+{% endfor %}

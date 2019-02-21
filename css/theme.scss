@@ -103,17 +103,19 @@ STARTING BOX WRAPPER*/
 .box_wrapper{
   //background-color: orange;
   margin:2px 20px 0px 20px;
+  padding-bottom:20px;
   flex:1;
   flex-wrap:wrap;
   display:flex;
   justify-content: space-between;
   .box_img{
-    margin:.5vw;
+    flex:1;
+    margin:1vw;
     margin-bottom:15px;
-    width:48%;
+    width:46%;
     height:48%;
     background-color: green;
-    box-shadow: 0px 0px 32px -4px rgba(0,0,0,1);
+    box-shadow: 0px 0px 18px -4px rgba(0,0,0,1);
   }
 }
 //SMALLER SCREENS <800
