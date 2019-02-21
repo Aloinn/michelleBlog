@@ -13,5 +13,5 @@ images:
     title: Slow dance in the dark
 ---
 {% for image in page.images %}
-  <img class="box_img" src="{{ image.image_path }}" alt="{{ image.title}}"/>
+  <img class="box_img" src="{{site.url}}/{{ image.image_path }}" alt="{{ image.title}}"/>
 {% endfor %}
